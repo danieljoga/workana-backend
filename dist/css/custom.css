@@ -55,10 +55,19 @@ body{
 
 }
 
+.img-circle {
+    border-radius: 50%;
+}
+
 .box-header .box-title {
     color: #161616;
     font-size: 16px;
     text-align: justifyLeft;
+}
+
+.skin-blue .main-header .navbar{
+    padding-top: 0;
+    padding-bottom: 0
 }
 
 
@@ -128,11 +137,28 @@ body{
     border-bottom: 0
 }
 
-.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
+.nav-tabs>li>a.active, .nav-tabs>li>a.active:focus, .nav-tabs>li>a.active:hover{
     border-left: 0;
     border-right: 0;
     border-top: 2px solid #005296;
     border-radius: 0
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    border-color: #005296;
+    border-bottom: 0
+}
+
+#col-4, #content-blue{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+#facturacion #content-blue{
+    text-align: left;
 }
 
 .nav-tabs>li>a:hover{
@@ -163,8 +189,11 @@ body{
     background: rgba(255,255,255,0.3)
 }
 
-.main-sidebar{
-    width: 266px
+
+@media (min-width: 768px) {
+    .main-sidebar{
+        width: 266px
+    }
 }
 
 .user-panel .image img{
@@ -241,12 +270,15 @@ body{
     font-size: 18px
 }
 
-.content-wrapper, .main-footer,.main-header .navbar{
-    margin-left: 266px
-}
 
-.main-header .logo{
-    width: 266px
+@media (min-width: 768px) {
+    .content-wrapper, .main-footer,.main-header .navbar{
+        margin-left: 266px
+    }
+
+    .main-header .logo{
+        width: 266px
+    }
 }
 
 .sidebar-collapse .sidebar-menu{
@@ -401,7 +433,7 @@ body{
 }
 
 
-.box-bottom{
+#content-blue > div{
     margin-left: -10px;
     margin-right: -10px;
     margin-bottom: -10px;
@@ -410,16 +442,22 @@ body{
     border-radius: 0 5px 0;
     padding-top: 10px;
     padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.filter .select2,.select2-results__option{
+    font-size: 14px
 }
 
 
-.box-bottom:first-child{
+#content-blue .col-md-6:first-child{
     margin-right: 0px;
 }
 
-.box-bottom:last-child{
+#content-blue .col-md-6:last-child{
 
-    margin-left: 30px;
+    margin-left: 20px;
     border-radius: 5px 0;
 }
 
@@ -466,4 +504,36 @@ body{
 
 .t-26{
     font-size: 24px
+}
+
+.navbar-static-top .sidebar-toggle{
+    display: none;
+}
+
+@media (max-width: 768px){
+    .skin-blue .main-header .logo{
+        border-bottom: 1px solid #555;
+    }
+
+    .navbar-static-top .sidebar-toggle{
+        display: table;
+        padding: 11px 15px
+    }
+    .skin-blue .main-header .navbar{
+        display: block
+    }
+
+    .skin-blue .main-header .navbar .nav>li>a {
+        padding: 16px;
+        top: 13px;
+        position: relative;
+    }
+    
+    
+    #content-blue > div,#content-blue .col-md-6:last-child{
+        margin-left: 0;
+        border-radius: 0;
+        margin-bottom: 10px
+    }
+    
 }

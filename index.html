@@ -7,7 +7,7 @@
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <!-- Bootstrap 3.3.7 -->
-        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <!-- Font Awesome -->
         <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
         <!-- Select2 -->
@@ -35,7 +35,7 @@
 
             <header class="main-header">
                 <!-- Logo -->
-                <a href="index2.html" class="logo">
+                <a href="index.html" class="logo">
                     <!-- mini logo for sidebar mini 50x50 pixels -->
                     <span class="logo-mini"><b>numu</b></span>
                     <!-- logo for regular state and mobile devices -->
@@ -43,7 +43,9 @@
                 </a>
                 <!-- Header Navbar: style can be found in header.less -->
                 <nav class="navbar navbar-static-top">
-
+                    <a style="margin-top: 0" href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                        <span class="sr-only">Toggle navigation</span>
+                    </a>
                     <div class="pull-left main-title">
                         #NumuNetwork_Panel  V1
                     </div>
@@ -122,7 +124,7 @@
                 <section class="content">
                     <section class="filter">
                         Filtrar datos por: 
-                        <select class="form-control select2"  style="max-width: 270px;margin-left: 10px">
+                        <select class="form-control select2"  style="max-width: 270px;font-size: 14px;margin-left: 10px">
                             <option selected="selected">Usuarios interesados en tu empresa</option>
                             <option>Alaska</option>
                             <option>California</option>
@@ -183,28 +185,28 @@
 
                                         <!-- Nav tabs -->
                                         <ul class="nav nav-tabs" role="tablist">
-                                            <li role="presentation" class="active">
-                                                <a href="#ciudades" aria-controls="ciudades" role="tab" data-toggle="tab">
+                                            <li role="presentation" class="nav-item">
+                                                <a class="nav-link active" href="#ciudades" aria-controls="ciudades" role="tab" data-toggle="tab">
                                                     Ciudades
                                                 </a>
                                             </li>
-                                            <li role="presentation">
-                                                <a href="#pais" aria-controls="pais" role="tab" data-toggle="tab">
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link" href="#pais" aria-controls="pais" role="tab" data-toggle="tab">
                                                     País
                                                 </a>
                                             </li>
-                                            <li role="presentation">
-                                                <a href="#educacion" aria-controls="educacion" role="tab" data-toggle="tab">
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link" href="#educacion" aria-controls="educacion" role="tab" data-toggle="tab">
                                                     Educación
                                                 </a>
                                             </li>
-                                            <li role="presentation">
-                                                <a href="#educacion-u" aria-controls="educacion-u" role="tab" data-toggle="tab">
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link" href="#educacion-u" aria-controls="educacion-u" role="tab" data-toggle="tab">
                                                     Educación universitaria
                                                 </a>
                                             </li>
-                                            <li role="presentation">
-                                                <a href="#estado-laboral" aria-controls="estado-laboral" role="tab" data-toggle="tab">
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link" href="#estado-laboral" aria-controls="estado-laboral" role="tab" data-toggle="tab">
                                                     Estado laboral
                                                 </a>
                                             </li>
@@ -347,7 +349,7 @@
                         </div>
 
 
-                        <div class="col-xs-12">
+                        <div class="col-12">
                             <div class="text-line">
                                 <span>Nivel de influencia y consumo</span>
                             </div>
@@ -360,7 +362,7 @@
                                 <div class="box-body">
                                     <div class="static-col Aligner">
                                         <div class="candado Aligner-item">
-                                            <img class="img-responsive" src="dist/img/candado.png" alt="">
+                                            <img class="img-fluid" src="dist/img/candado.png" alt="">
                                         </div>
 
                                     </div>
@@ -380,7 +382,7 @@
                                 <div class="box-body">
                                     <div class="static-col Aligner">
                                         <div class="candado Aligner-item">
-                                            <img class="img-responsive" src="dist/img/candado.png" alt="">
+                                            <img class="img-fluid" src="dist/img/candado.png" alt="">
                                         </div>
 
                                     </div>
@@ -400,7 +402,7 @@
                                 <div class="box-body">
                                     <div class="static-col Aligner">
                                         <div class="candado Aligner-item">
-                                            <img class="img-responsive" src="dist/img/candado.png" alt="">
+                                            <img class="img-fluid" src="dist/img/candado.png" alt="">
                                         </div>
 
                                     </div>
@@ -418,7 +420,7 @@
 
 
 
-                        <div class="col-xs-12">
+                        <div class="col-12">
                             <div class="text-line">
                                 <span>Facturación de tu empresa</span>
                             </div>
@@ -516,47 +518,51 @@
                                             <div class="tt25-122-087-00">
                                                 25,122,087.00 € 
                                             </div>
-                                            <div class="box-bottom col-md-6 align-vertically">
-                                                <div>
-                                                    <div class="fact-title">% para MYWO</div>
-                                                    <div class="box-radius align-vertically">
-                                                        97%
+                                            <div id="content-blue">
+                                                <div class="col-md-6">
+                                                    <div class="box-bottom align-vertically">
+                                                        <div>
+                                                            <div class="fact-title">% para MYWO</div>
+                                                            <div class="box-radius align-vertically">
+                                                                97%
+                                                            </div>
+                                                        </div>
+                                                        <div class="line-seg align-vertically">
+                                                            <div>
+                                                                <div>&nbsp;</div>
+                                                                <div>---</div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="fact-title">Beneficios MYWO</div>
+                                                            <div class="box-radius t-26 align-vertically">
+                                                                2,368,424.39 €
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="line-seg align-vertically">
-                                                    <div>
-                                                        <div>&nbsp;</div>
-                                                        <div>-----</div>
+                                                <div class="col-md-6">
+                                                    <div class="box-bottom align-vertically">
+                                                        <div>
+                                                            <div class="fact-title">% para MYWO</div>
+                                                            <div class="box-radius align-vertically">
+                                                                97%
+                                                            </div>
+                                                        </div>
+                                                        <div class="line-seg align-vertically">
+                                                            <div>
+                                                                <div>&nbsp;</div>
+                                                                <div>---</div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="fact-title">Beneficios MYWO</div>
+                                                            <div class="box-radius t-26 align-vertically">
+                                                                2,368,424.39 €
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div>
-                                                    <div class="fact-title">Beneficios MYWO</div>
-                                                    <div class="box-radius t-26 align-vertically">
-                                                        2,368,424.39 €
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <div class="box-bottom col-md-6 align-vertically">
-                                                <div>
-                                                    <div class="fact-title">% para MYWO</div>
-                                                    <div class="box-radius align-vertically">
-                                                        97%
-                                                    </div>
-                                                </div>
-                                                <div class="line-seg align-vertically">
-                                                    <div>
-                                                        <div>&nbsp;</div>
-                                                        <div>-----</div>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <div class="fact-title">Beneficios MYWO</div>
-                                                    <div class="box-radius t-26 align-vertically">
-                                                        2,368,424.39 €
-                                                    </div>
-                                                </div>
-
                                             </div>
                                         </div>
                                         <!-- /.box-body -->
@@ -678,8 +684,8 @@
 
         <!-- jQuery 3 -->
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
-        <!-- Bootstrap 3.3.7 -->
-        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- Bootstrap 4.0.0 -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <!-- ChartJS -->
         <script src="bower_components/chart.js/Chart.min.js"></script>
         <script src="bower_components/chart.js/PieceLabel.js"></script>
@@ -690,7 +696,7 @@
         <!-- AdminLTE for demo purposes -->
         <script src="dist/js/app.js"></script>
         <!-- page script -->
-
+        <!--<script src="dist/js/options.js"></script>-->
 
 
 
