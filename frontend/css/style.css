@@ -1,0 +1,418 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 12-06-2018, 10:34:22 AM
+    Author     : danilo
+*/
+
+@font-face {font-family:"Louis George Cafe";
+            src:url("../fonts/Louis_George_Cafe.eot?") format("eot"),
+                url("../fonts/Louis_George_Cafe.woff") format("woff"),
+                url("../fonts/Louis_George_Cafe.ttf") format("truetype"),
+                url("../fonts/Louis_George_Cafe.svg#LouisGeorgeCafe") format("svg");
+            font-weight:normal;
+            font-style:normal;
+}
+
+@font-face {
+    font-family:"Louis George Cafe Light";
+    src:url("../fonts/Louis_George_Cafe_Light.eot?") format("eot"),
+        url("../fonts/Louis_George_Cafe_Light.woff") format("woff"),
+        url("../fonts/Louis_George_Cafe_Light.ttf")  format("truetype"),
+        url("../fonts/Louis_George_Cafe_Light.svg#LouisGeorgeCafeLight")  format("svg");
+    font-weight:normal;
+    font-style:normal;
+}
+
+
+@font-face {
+    font-family:"Rounded Elegance";
+    src:url("../fonts/Rounded_Elegance.eot?") format("eot"),
+        url("../fonts/Rounded_Elegance.woff") format("woff"),
+        url("../fonts/Rounded_Elegance.ttf") format("truetype"),
+        url("../fonts/Rounded_Elegance.svg#RoundedElegance-Regular") format("svg");
+    font-weight:normal;
+    font-style:normal;
+}
+
+
+body{
+    font-family: "Louis George Cafe";
+    background-color: #f2f0f1
+}
+
+.animation-element{
+    opacity: 0
+}
+
+#content-header{
+    padding-bottom: 0!important;
+    padding-top: 39px!important;
+    background-image: url(../img/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 0!important;
+    border: 0!important;
+}
+
+#main-menu, #content-header a.btn{
+    margin-top: -35px!important
+}
+
+#content-header a.btn:hover{
+    border-color: rgba(233,91,131,1);
+    color: rgba(233,91,131,1);
+    background: transparent
+}
+
+#main-menu a:hover{
+    color: #E95B83!important
+}
+
+
+#content-header a.btn{
+    padding: 2px 15px;
+    color: #fff;
+    border-color: #fff;
+}
+
+.navbar-brand{
+    padding: 0
+}
+
+.navbar-dark .navbar-toggler{
+    position: absolute;
+    right: 20px;
+    border-color: rgba(255,255,255,.5);
+}
+
+#main-menu a{
+    color: #fff!important;
+    font-size: 16px
+}
+
+#banner{
+    height: 500px;
+    background-image: url(../img/banner.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:flex;
+    align-items:center;
+}
+
+#banner .title{
+    font-size: 60px;
+    font-weight: bold;
+    color: #ea6c90;
+    margin-bottom: 20px
+}
+
+#content-banner{
+    display: table;
+    margin: auto
+}
+
+#content-banner form{
+    text-align: center
+}
+
+#search{
+    border: 1px solid #E95B83;
+    border-radius: 20px;
+    width: 300px;
+    padding: 5px 20px;
+
+}
+#search::placeholder{
+    color: #FFB0CF
+}
+
+
+#select-element{
+    margin-top: 10px
+}
+
+#select-element .select2-container:last-child{
+    margin-left: 10px
+}
+
+.select2-container{
+    width: auto!important
+}
+
+.select2-container--open .select2-dropdown--above, .select2-container--open .select2-dropdown--below{
+    width: 200px!important
+}
+
+.select2-container--default .select2-selection--single{
+    border: 0;
+    background-color: transparent
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+    color: #fff
+}
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b{
+    border-color: transparent transparent #fff transparent
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b{
+    border-color: #fff transparent transparent transparent
+}
+
+
+.select2-container--default .select2-results__option--highlighted[aria-selected]{
+    background-color: #FF6985   
+}
+
+
+
+#body{
+    padding: 190px 0
+}
+
+
+.item {
+    position: relative;
+    margin-bottom: 40px
+}
+
+.item .bg-hover{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    -webkit-transition: opacity 0.4s ease-in-out;
+    -moz-transition: opacity 0.4s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
+    background-image: url(../img/mousover.png);
+    background-size: cover;
+}
+
+.item .bg-hover img{
+    margin: auto
+}
+
+.item .thumbnail:hover{
+    cursor: pointer
+}
+
+.item:hover .thumbnail .bg-hover{
+    opacity: 1
+}
+
+.item .caption{
+    padding: 15px 5px;
+    text-align: center;
+    color: #E95B83;
+    border: 1px solid #E95B83;
+    border-top: 0;
+    border-radius: 0 0 15px 15px;
+}
+
+.item .thumbnail{
+    position: relative;
+}
+
+.item .thumbnail > img{
+    width: 100%;
+    border: 1px solid #E95B83;
+    border-bottom: 0;
+    border-radius: 15px 15px 0 0;
+}
+
+
+
+#paginate{
+    margin-top: 40px
+}
+
+#paginate ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: table;
+    margin: auto
+}
+
+#paginate ul li{
+    float: left;
+    margin-right: 10px
+}
+
+#paginate ul li a:hover{
+    text-decoration: none;
+    color: #dc5382;
+}
+
+#paginate ul li a{
+    color: #f1cbd4;
+    padding: 7px;
+    font-size: 25px
+}
+#paginate ul li a.active{
+    color: #dc5382;
+}
+#paginate ul li a.arrow{
+    color: #ff6985;
+    font-size: 25px;
+    line-height: 35px
+}
+
+footer{
+    padding: 40px 0 0 0;
+    background-color: #232323;
+    overflow-x: hidden
+}
+
+footer .img-logo{
+    max-width: 280px
+}
+
+
+#footer-menu a{
+    color: #ACACAC
+}
+
+#social{
+    border: 1px solid #444;
+    border-left: 0;
+    border-right: 0;
+    padding: 32px 0
+}
+
+
+#social ul{
+    list-style: none;
+    display: table;
+    margin: auto
+}
+
+
+#social ul li{
+    float: left;
+    margin: 0 22px
+}
+
+#social ul li a:hover{
+    opacity: 0.7
+}
+
+#footer-l h4, #footer-r h4{
+    font-size: 26px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+#footer-l img{
+    float: left;
+    margin-right: 15px
+}
+
+#footer-r img{
+    float: right
+}
+
+#footer-r div{
+    float: right;
+    margin-left: 15px
+}
+
+#footer-l p, #footer-r p{
+    color: #ACACAC;
+    font-size: 16px;
+    line-height: 20px
+}
+
+#footer-info{
+    padding: 50px 0
+}
+
+#last-footer {
+    color: #ACACAC;
+    font-size: 16px;
+    background-color: #141313;
+    padding: 15px 0
+}
+
+#last-footer .btn{
+    color: #ACACAC;
+    border: 1px solid #ACACAC;
+    border-radius: 5px;
+    padding: 0 15px
+}
+
+#last-footer .btn:hover{
+    opacity: 0.7
+}
+
+@media (min-width: 1200px){
+    .container {
+        max-width: 1050px;
+    }
+}
+
+
+@media (max-width: 767px){
+    #content-header {
+        padding-top: 10px !important;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 999;
+    }
+
+    #main-menu, #content-header a.btn{
+        margin-top: 0!important;
+        margin-bottom: 15px
+    }
+
+    #navbarCollapse{
+        position: absolute;
+        top: 122px;
+        background: #222;
+        width: 100%;
+        left: 0;
+    }
+    #main-menu a{
+        display: block;
+        padding-left: 20px
+    }
+
+    #banner{
+        margin-top: 122px
+    }
+
+    #banner .title{
+        font-size: 40px;
+        text-align: center
+    }
+
+    #footer-r{
+        display: table;
+        float: left;
+        width: auto;
+    }
+
+    #footer-r img {
+        float: left;
+    }
+    
+    #last-footer{
+        text-align: center
+    }
+    
+    #last-footer a.btn{
+        margin-top: 15px
+    }
+}
