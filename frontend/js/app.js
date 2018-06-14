@@ -8,6 +8,18 @@
 
 
 
+$(document).ready(function () {
+    $('#content-categories a').click(function(e){
+        $('#text-filter').html(this.innerText);
+        $('#category').val($(this).data('value'));
+        $('#collapse-categories').slideUp(200, function(){
+           $(this).removeClass('show');
+           $(this).removeAttr('style');
+        });
+        e.preventDefault();
+    });
+});
+
 $(window).ready(function () {
 
 
