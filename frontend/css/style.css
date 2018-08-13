@@ -541,6 +541,12 @@ footer .img-logo{
         width: 100%;
         z-index: 999;
     }
+    
+    #footer-menu a {
+    color: #ACACAC;
+    width: 100%;
+    text-align: center;
+}
 
     #main-menu, #content-header a.btn{
         margin-top: 0!important;
