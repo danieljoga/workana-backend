@@ -9,15 +9,19 @@
 
 
 $(document).ready(function () {
-    $('#content-categories a').click(function(e){
+    $('#content-categories a').click(function (e) {
         $('#text-filter').html(this.innerText);
         $('#category').val($(this).data('value'));
-        $('#collapse-categories').slideUp(200, function(){
-           $(this).removeClass('show');
-           $(this).removeAttr('style');
+        $('#collapse-categories').slideUp(200, function () {
+            $(this).removeClass('show');
+            $(this).removeAttr('style');
         });
         e.preventDefault();
     });
+
+
+
+
 });
 
 $(window).ready(function () {
@@ -26,11 +30,17 @@ $(window).ready(function () {
 
     $('.select2').select2();
 
-
-
-
-    var $animation_elements = $('.animation-element');
+    var $animation_elements = null;
     var $window = $(window);
+
+    $('#header').load('includes/header.html');
+    $('#footer').load('includes/footer.html', function () {
+        $animation_elements = $('.animation-element');
+        $window.on('scroll resize', check_if_in_view);
+        $window.trigger('scroll');
+    });
+
+
 
     function check_if_in_view() {
         var window_height = $window.height();
@@ -55,8 +65,7 @@ $(window).ready(function () {
         });
     }
 
-    $window.on('scroll resize', check_if_in_view);
-    $window.trigger('scroll');
+
 });
 
 
